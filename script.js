@@ -1,5 +1,6 @@
 
 
+
     AOS.init();
     function validateForm() {
         const name = document.getElementById("name").value;
