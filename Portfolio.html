@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Vamsi's Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <img class="logo" src="logo2.png" alt="logo"></img>
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-switch" />
+                <label class="theme-switch-label" for="theme-switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div id="home" class="main-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <div class="image" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+                <img src="my pic.jpeg" alt="My Image" />
+            </div>
+            <div class="content" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+                <h1>I'm <span>Kumara Vamsi</span></h1>
+                <p>Welcome to my portfolio! I’m a passionate web developer with a keen interest in AI and Machine
+                    Learning. I enjoy turning complex problems into simple, beautiful, and intuitive solutions.</p>
+                <p>As I continue my B.Tech in AIML, I’ve been actively building projects and improving my skill set. My
+                    goal is to merge AI with web development too.<br><span>Contact Me In</span></p>
+
+
+                <div class="social-links">
+                    <a href="https://facebook.com/VamsiSirigineedi" target="_blank" aria-label="Facebook"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/Kumara-Vamsi-Sirigineedi-" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/its_me_k_vamsi" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                 </div>
+                 <div class="signature">
+                 <img src="signature.png" alt="Signature"
+                 style="width: 200px; height: auto; margin-top: 10px;">
+                 </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+        <div class="about-container">
+            <div class="about-image">
+
+                <img src="my img.jpeg" alt="About Me" />
+            </div>
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I am Kumara Vamsi, a passionate web developer and AI enthusiast currently pursuing B.Tech in AIML
+                    (Artificial Intelligence and Machine Learning). My journey into programming started early, and I
+                    have always been fascinated by how technology can be used to solve real-world problems.
+                </p>
+                <p>
+                    In my portfolio, I showcase a blend of web development and AI/ML projects. My skillset includes
+                    HTML, CSS, JavaScript, React, and Python. I am constantly looking for new challenges and projects
+                    that allow me to grow and explore new technologies.
+                </p>
+                <p>
+                    I believe in creating intuitive and user-friendly web applications. As I continue to advance in my
+                    technical skills, I aim to bridge the gap between web development and AI to build smarter, more
+                    interactive solutions.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-section"  data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <ul>
+                    <li>MS Designer</li>
+                    <li>UIzard</li>
+                    <li>Canva</li>
+                    <li>Namelix</li>
+                    <li>MS Office Tools</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+        <h1>My Projects Gallery</h1>
+
+        <div class="filter-controls">
+            <label for="filter">Filter by: </label>
+            <select id="filter" onchange="filterProjects()">
+                <option value="all">All</option>
+                <option value="calculator">Calculator</option>
+                <option value="Expense tracker">Expense tracker</option>
+                <option value="Portfolio">My Portfolio</option>
+            </select>
+
+            <label for="sort">Sort by: </label>
+            <select id="sort" onchange="sortProjects()">
+                <option value="title">Title</option>
+                <option value="date">Date</option>
+            </select>
+        </div>
+
+        <div class="gallery" id="gallery">
+            <div class="project" data-category="calculator" data-date="2024-10-01">
+                <img src="project1.png" alt="Basic Calculator" onclick="openModal(this)">
+                <h3>Basic Calculator</h3>
+                <p>A simple calculator that performs basic arithmetic operations.</p>
+                <a href="Basic cal.html" target="_blank">View Project</a>
+            </div>
+            <div class="project" data-category="Expense tracker" data-date="2024-10-10">
+                <img src="project2.jpg" alt="Projects Gallery" onclick="openModal(this)">
+                <h3>Expense tracker</h3>
+                <p>A Simple Expense tracker which is useful to Calculate our Expenses.</p>
+                <a href="Expense tracker.html" target="_blank">View project</a>
+            </div>
+            <div class="project" data-category="Portfolio" data-date="2024-10-10">
+                <img src="project3.jpeg" alt="Projects Gallery" onclick="openModal(this)">
+                <h3>Portfolio Website</h3>
+                <p>A Sample to showcase our skills ,projects etc.</p>
+                <a href="index.html" target="_blank">View project</a>
+            </div>
+            <!-- Add more project divs here -->
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+        <h2 class="contact-heading">Get in Touch</h2>
+        <form class="contact-form" id="contactForm">
+            <label class="contact-label" for="name">Name:</label>
+            <input class="contact-input" type="text" id="name" name="name" required>
+
+            <label class="contact-label" for="email">Email:</label>
+            <input class="contact-input" type="email" id="email" name="email" required>
+
+            <label class="contact-label" for="message">Message:</label>
+            <textarea class="contact-textarea" id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="contact-button">Send Message</button>
+
+            <div id="successMessage" class="message-success" style="display:none;">Your message has been sent!</div>
+            <div id="errorMessage" class="message-error" style="display:none;">Oops, something went wrong.</div>
+        </form>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
