@@ -15,6 +15,7 @@ body {
     background-color: black;
     color: white;
     margin: 0 auto;
+    display: flexbox;
   
 }
 
@@ -80,6 +81,7 @@ nav.light-mode {
 .light-mode .logo,
 .light-mode .nav-container .links a {
     color: #f8eeee;
+
 }
 
 nav {
@@ -277,23 +279,11 @@ section {
 
 .logo {
     width: 200px;
-    padding-top: 80px;
-    opacity: 100%;
-    
+    padding-top: 30px;
+    padding-left: 20px;
+    opacity: 30%;
 }
 
-.light-mode .logo {
-    background: #333;
-    height:30vh;
-    width:auto;
-    background-position: 90px;
-    border-radius: 20%;
-    border: 2px red solid ;
-    bottom: 20%;
-
-
-    
-}
 
 .projects-section {
     padding: 50px 20px;
@@ -612,89 +602,6 @@ section {
 .light-mode .contact-button:hover {
     background-color: #003d7a;
 }
-/* Hamburger icon for mobile */
-.menu-icon {
+.light-mode .logo{
     display: none;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .links {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
-/* Show links when the menu icon is clicked (use JavaScript to toggle this class) */
-.show-menu .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-@media (max-width: 480px) {
-    [data-aos] {
-        opacity: 1;
-        transform: none;
-    }
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-.skills-container {
-    display: inline-flex;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-.projects-section .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.project {
-    flex-basis: calc(50% - 10px); /* Make each project take half the screen on mobile */
-    margin: 5px;
-}
-
-@media (max-width: 480px) {
-    .project {
-        flex-basis: 100%; /* On very small screens, each project takes full width */
-    }
-}
-/* General mobile styles */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .links {
-        display: none; /* Or make it a dropdown menu */
-    }
-
-    .main-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-container {
-        flex-direction: column;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr; /* Stack skills on top of each other */
-    }
-
-    .project {
-        width: 100%; /* Make projects take full width on mobile */
-    }
-
-    .contact-section {
-        padding: 20px; /* Adjust spacing for mobile */
-    }
 }
