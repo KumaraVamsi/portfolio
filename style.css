@@ -142,6 +142,41 @@ section {
     align-items: center;
     padding: 20px 20px 0 20px;
 }
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #077b32;
+}
 
 /* Main Section */
 .main-container {
@@ -161,28 +196,28 @@ section {
 .main-container .image img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure the image covers the available space without distortion */
+    object-fit: cover; 
     border-radius: 10px;
 }
 
 .main-container .content {
-    width: 50%; /* Set content width to occupy the remaining space beside the image */
-    margin-left: 30px; /* Add space between the image and content */
+    width: 50%; 
+    margin-left: 30px; 
     color: white;
 }
 
 .content h1 {
-    font-size: clamp(2rem, 2.5vw, 3.5rem); /* Adjust heading size */
+    font-size: clamp(2rem, 2.5vw, 3.5rem); 
 }
 
 .content p {
-    font-size: clamp(1rem, 1vw, 1.2rem); /* Adjust paragraph size */
+    font-size: clamp(1rem, 1vw, 1.2rem);
     margin: 15px 0;
     line-height: 1.8;
 }
 
 .light-mode .main-container .image img {
-    background-color: transparent; /* Make the image background transparent in light mode */
+    background-color: transparent;
     opacity: 0.9;
 }
 
@@ -605,3 +640,61 @@ section {
 .light-mode .logo{
     display: none;
 }
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
+}
+
+
+
+
